@@ -33,7 +33,7 @@ You can now do something like this:
 
     my_array.maybe &it.first.reverse.upcase
 
-If the `my_array` variable were equal to `["foo", "bar", "qaz"]`, the result of the expression above would be `"OOF"`. However, `my_array` were equal to `[]`, the result of the expression would be `nil`. This `maybe` method will execute the chain of methods if and only if all were successful. If one failed, `nil` is returned.
+If the `my_array` variable were equal to `["foo", "bar", "qaz"]`, the result of the expression above would be `"OOF"`. However, if `my_array` were equal to `[]`, the result of the expression would be `nil`. This `maybe` method will execute the chain of methods if and only if all were successful. If one failed, `nil` is returned.
 
 So how does The Methodphitamine work?
 -------------------------------------
