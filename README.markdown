@@ -5,8 +5,8 @@ The Methodphitamine is a library for syntactically cleaner list comprehensions a
 
 For more information, read my [blog post](http://jicksta.com/posts/the-methodphitamine) covering the Methodphitamine.
 
-Cleaner Ruby#to_proc
---------------------
+Cleaner Symbol#to_proc
+----------------------
 
 One of the beautiful things the Ruby community has informally built into the language is Symbol#to_proc. The Methodphitamine takes beauty one step further.
 
