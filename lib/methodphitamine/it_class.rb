@@ -39,10 +39,11 @@ module Methodphitamine
   
   class MethodphitamineMaybe < It
     def to_proc
-      lambda do |obj|
+      Proc.new do |obj|
         @methods.inject(obj) do |current,(args,block)|
-          current = current.send(*args, &block)
-          current ? current : break
+          new_current = current.send(*args, &block)
+          return current unless new_current
+          new_current
         end
       end
     end

@@ -3,9 +3,10 @@ require File.dirname(__FILE__) + "/../lib/methodphitamine.rb"
 
 describe "The maybe() method" do
   it "should return nil when a link in a chain of methods returns nil before all methods are done executing" do
-    hash = {'mary' => {}}
+    mary = {"mary" => {}}
+    hash = {'mary' => mary}
     long_search = hash.maybe &it['mary']['had']['a']['little']['lamb'].fleece.color == :white_as_snow
-    long_search.should eql(nil)
+    long_search.should eql(mary)
   end
   
   it "should return the last return value in a chain of methods if all returned non-nil values" do
@@ -22,7 +23,7 @@ describe "The maybe() method" do
     two.bar = false
     
     value = one.maybe &it.two.bar.upcase.reverse
-    value.should eql(nil)
+    value.should eql(two)
   end
   
 end
