@@ -36,4 +36,16 @@ module Methodphitamine
     end
     
   end
+  
+  class MethodphitamineMaybe < It
+    def to_proc
+      lambda do |obj|
+        @methods.inject(obj) do |current,(args,block)|
+          current = current.send(*args, &block)
+          current ? current : break
+        end
+      end
+    end
+  end
+  
 end
