@@ -22,6 +22,6 @@ Gem::Specification.new do |s|
   
   s.required_rubygems_version = ">= 1.3"
   
-  s.files      = Dir.glob("lib/**/*.rb") + %w(License.txt History.txt README.markdown)
+  s.files      = Dir.glob("lib/**/*.rb") + %w(License.txt History.txt README.md)
   s.test_files = Dir.glob("spec/*_spec.rb")
 end
